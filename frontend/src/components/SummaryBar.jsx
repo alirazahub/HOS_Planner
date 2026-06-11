@@ -3,8 +3,9 @@ import { Grid, Paper, Stack, Typography } from '@mui/material';
 import { palette } from '../theme.js';
 
 const fmtDuration = (hours) => {
-  const d = Math.floor(hours / 24);
-  const h = Math.round(hours - d * 24);
+  const total = Math.round(hours);
+  const d = Math.floor(total / 24);
+  const h = total - d * 24;
   return d > 0 ? `${d}d ${h}h` : `${h}h`;
 };
 
