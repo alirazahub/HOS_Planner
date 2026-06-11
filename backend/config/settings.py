@@ -40,10 +40,16 @@ TEMPLATES = [
     },
 ]
 
+# On Vercel the filesystem is read-only except /tmp, so SQLite lives
+# there (ephemeral — fine for this demo, trips are only kept as records).
+_db_path = (
+    Path("/tmp/db.sqlite3") if os.environ.get("VERCEL")
+    else BASE_DIR / "db.sqlite3"
+)
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": _db_path,
     }
 }
 
