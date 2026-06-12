@@ -31,12 +31,12 @@ constraint and inserts the right event:
 
 | Rule | Implementation |
 |---|---|
-| 11-hour driving limit (§395.3(a)(3)) | drive time capped per shift |
-| 14-hour driving window (§395.3(a)(2)) | no driving past 14h from shift start |
-| 30-min break after 8h driving (§395.3(a)(3)(ii)) | cumulative drive counter |
+| 11-hour driving limit (395.3(a)(3)) | drive time capped per shift |
+| 14-hour driving window (395.3(a)(2)) | no driving past 14h from shift start |
+| 30-min break after 8h driving (395.3(a)(3)(ii)) | cumulative drive counter |
 | 10-hour daily rest | resets shift clocks (logged as sleeper berth) |
-| 70-hour/8-day cycle (§395.3(b)) | on-duty accumulator incl. input cycle hours |
-| 34-hour restart (§395.3(c)) | inserted when the cycle is exhausted |
+| 70-hour/8-day cycle (395.3(b)) | on-duty accumulator incl. input cycle hours |
+| 34-hour restart (395.3(c)) | inserted when the cycle is exhausted |
 | Fuel every 1,000 miles | 30 min on-duty, tracked by odometer |
 | Pickup / drop-off | 1 hour on-duty each |
 
