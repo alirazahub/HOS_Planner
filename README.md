@@ -80,16 +80,6 @@ npm install
 npm run dev                       # http://localhost:5173 (proxies /api → :8000)
 ```
 
-## Deploy
-
-**Backend → Render** (free tier): `render.yaml` included — or manually:
-build `pip install -r requirements.txt && python manage.py migrate`,
-start `gunicorn config.wsgi`. Set `DJANGO_DEBUG=false`,
-`CORS_ALLOWED_ORIGINS=https://<your-app>.vercel.app`.
-
-**Frontend → Vercel:** root directory `frontend`, framework Vite.
-Set `VITE_API_BASE_URL=https://<your-backend>.onrender.com`.
-
 ## API
 
 `POST /api/trips/plan/`
